@@ -46,4 +46,17 @@ enum CellType {
             return tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier) as! SwitchTableViewCell
         }
     }
+
+    func didSelectCell(cell: UITableViewCell) {
+        switch self {
+        case .simpleCell(let model):
+            model.cellTapped()
+        case .extendedInfoCell(let model):
+            model.cellTapped()
+        case .notificationCell(let model):
+            model.cellTapped()
+        case .switchCell(let model):
+            model.cellTapped()
+        }
+    }
 }
