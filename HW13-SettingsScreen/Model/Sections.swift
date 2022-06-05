@@ -25,4 +25,13 @@ enum CellType {
             cell.configure(with: model)
         }
     }
+
+    func getCellType(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        switch self {
+        case .simpleCell:
+            return  tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.identifier) as! SimpleTableViewCell
+        case .extendedInfoCell:
+            return tableView.dequeueReusableCell(withIdentifier: ExtendedInfoTableViewCell.identifier) as! ExtendedInfoTableViewCell
+        }
+    }
 }
