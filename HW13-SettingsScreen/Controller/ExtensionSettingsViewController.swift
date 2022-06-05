@@ -19,7 +19,7 @@ extension SettingsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = modelsArray[indexPath.section].items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.identifier, for: indexPath) as! SimpleTableViewCell
+        let cell = model.getCellType(tableView: tableView, indexPath: indexPath)
         model.configureCell(cell: cell, model: model)
         cell.layoutMargins.left = 55
         return cell

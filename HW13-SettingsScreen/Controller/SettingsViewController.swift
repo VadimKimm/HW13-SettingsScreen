@@ -52,6 +52,7 @@ class SettingsViewController: UIViewController {
         tableView.delegate = self
 
         tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
+        tableView.register(ExtendedInfoTableViewCell.self, forCellReuseIdentifier: ExtendedInfoTableViewCell.identifier)
     }
 
     private func setupNavigationBarAppearance() {
