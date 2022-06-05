@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
         return tableView
     }()
 
+    var modelsArray = SettingsCellApi.getCellsArray()
+    
     //MARK: - Lifecycle -
 
     override func viewDidLoad() {
@@ -49,7 +51,7 @@ class SettingsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
     }
 
     private func setupNavigationBarAppearance() {

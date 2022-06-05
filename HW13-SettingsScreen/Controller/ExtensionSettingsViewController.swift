@@ -9,14 +9,20 @@ import UIKit
 
 extension SettingsViewController: UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return modelsArray.count
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return modelsArray[section].items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-         cell.textLabel?.text = "Hello World"
-         return cell
+        let model = modelsArray[indexPath.section].items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.identifier, for: indexPath) as! SimpleTableViewCell
+        model.configureCell(cell: cell, model: model)
+        cell.layoutMargins.left = 55
+        return cell
     }
 }
 
