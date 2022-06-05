@@ -15,6 +15,7 @@
 		DD226429284CEDAF003ED8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */; };
 		DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */; };
 		DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */; };
+		DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226438284CF543003ED8B7 /* SimpleCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DD22642A284CEDAF003ED8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsViewController.swift; sourceTree = "<group>"; };
 		DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellModel.swift; sourceTree = "<group>"; };
+		DD226438284CF543003ED8B7 /* SimpleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */,
+				DD226438284CF543003ED8B7 /* SimpleCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */,
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
+				DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
