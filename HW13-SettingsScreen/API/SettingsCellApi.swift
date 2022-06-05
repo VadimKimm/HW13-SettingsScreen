@@ -35,7 +35,7 @@ class SettingsCellApi {
         "battery": UIImage(systemName: "battery.100"),
         "privacy": UIImage(systemName: "hand.raised.fill"),
 
-        "notificationsCount": UIImage(systemName: "1.circle.fill"),
+        "notificationsCount": UIImage(systemName: "1.circle.fill")
     ]
 
     static func getCellsArray(_ dictionaryOfIcons: [String: UIImage?] = SettingsCellApi.dictionaryOfIcons) -> [Sections] {
@@ -125,7 +125,6 @@ class SettingsCellApi {
                                        backgroundColor: .systemBlue,
                                        labelText: "Конфиденциальность"))
         ]
-
 
         modelsArray = [
             Sections(items: firstSection),
