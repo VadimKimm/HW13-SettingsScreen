@@ -13,11 +13,15 @@ struct Sections {
 
 enum CellType {
     case simpleCell(SimpleCellModel)
+    case extendedInfoCell(ExtendedInfoCellModel)
 
     func configureCell(cell: UITableViewCell, model: CellType) {
         switch self {
         case .simpleCell(let model):
             let cell = cell as! SimpleTableViewCell
+            cell.configure(with: model)
+        case .extendedInfoCell(let model):
+            let cell = cell as! ExtendedInfoTableViewCell
             cell.configure(with: model)
         }
     }
