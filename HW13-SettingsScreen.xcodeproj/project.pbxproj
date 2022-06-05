@@ -25,6 +25,7 @@
 		DD226448284D0B14003ED8B7 /* NotificationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226447284D0B14003ED8B7 /* NotificationCellModel.swift */; };
 		DD22644A284D0B7E003ED8B7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */; };
 		DD22644C284D0D46003ED8B7 /* SwitchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22644B284D0D46003ED8B7 /* SwitchCellModel.swift */; };
+		DD22644E284D0D91003ED8B7 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22644D284D0D91003ED8B7 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DD226447284D0B14003ED8B7 /* NotificationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellModel.swift; sourceTree = "<group>"; };
 		DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		DD22644B284D0D46003ED8B7 /* SwitchCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellModel.swift; sourceTree = "<group>"; };
+		DD22644D284D0D91003ED8B7 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */,
 				DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */,
 				DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */,
+				DD22644D284D0D91003ED8B7 /* SwitchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
 				DD226442284CF713003ED8B7 /* Sections.swift in Sources */,
 				DD226444284D06D5003ED8B7 /* ExtendedInfoCellModel.swift in Sources */,
+				DD22644E284D0D91003ED8B7 /* SwitchTableViewCell.swift in Sources */,
 				DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 				DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */,
