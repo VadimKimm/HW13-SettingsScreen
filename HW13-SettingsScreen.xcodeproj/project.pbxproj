@@ -56,7 +56,6 @@
 				BA6488304D7A4B1179824576 /* Pods-HW13-SettingsScreen.debug.xcconfig */,
 				7F5341891EAB6FCFA1961327 /* Pods-HW13-SettingsScreen.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,47 @@
 		DD22641B284CEDAE003ED8B7 /* HW13-SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DD226433284CEFC6003ED8B7 /* Model */,
+				DD226432284CEFC1003ED8B7 /* View */,
+				DD226431284CEFB6003ED8B7 /* Controller */,
+				DD226430284CEF92003ED8B7 /* Resourses */,
+			);
+			path = "HW13-SettingsScreen";
+			sourceTree = "<group>";
+		};
+		DD226430284CEF92003ED8B7 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
 				DD22641C284CEDAE003ED8B7 /* AppDelegate.swift */,
 				DD22641E284CEDAE003ED8B7 /* SceneDelegate.swift */,
-				DD226420284CEDAE003ED8B7 /* ViewController.swift */,
 				DD226422284CEDAE003ED8B7 /* Main.storyboard */,
 				DD226425284CEDAF003ED8B7 /* Assets.xcassets */,
 				DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */,
 				DD22642A284CEDAF003ED8B7 /* Info.plist */,
 			);
-			path = "HW13-SettingsScreen";
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		DD226431284CEFB6003ED8B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD226420284CEDAE003ED8B7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD226432284CEFC1003ED8B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD226433284CEFC6003ED8B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
