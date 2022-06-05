@@ -31,4 +31,11 @@ extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 42
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let model = modelsArray[indexPath.section].items[indexPath.row]
+        let cell = model.getCellType(tableView: tableView, indexPath: indexPath)
+        model.didSelectCell(cell: cell)
+    }
 }
