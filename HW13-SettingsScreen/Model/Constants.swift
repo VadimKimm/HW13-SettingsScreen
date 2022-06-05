@@ -19,4 +19,8 @@ enum Metrics {
 
     static let sideLabelFontSize: CGFloat = 16
     static let sideLabelRightOffset = -8
+
+    static let notificationsImageViewWidthOffset = -16
+    static let notificationsImageViewHeightOffset = -16
+    static let notificationsImageViewRightOffset = -18
 }

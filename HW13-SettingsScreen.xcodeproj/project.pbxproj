@@ -22,6 +22,8 @@
 		DD226442284CF713003ED8B7 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226441284CF713003ED8B7 /* Sections.swift */; };
 		DD226444284D06D5003ED8B7 /* ExtendedInfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226443284D06D5003ED8B7 /* ExtendedInfoCellModel.swift */; };
 		DD226446284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */; };
+		DD226448284D0B14003ED8B7 /* NotificationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226447284D0B14003ED8B7 /* NotificationCellModel.swift */; };
+		DD22644A284D0B7E003ED8B7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		DD226441284CF713003ED8B7 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		DD226443284D06D5003ED8B7 /* ExtendedInfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedInfoCellModel.swift; sourceTree = "<group>"; };
 		DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DD226447284D0B14003ED8B7 /* NotificationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellModel.swift; sourceTree = "<group>"; };
+		DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			children = (
 				DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */,
 				DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */,
+				DD226449284D0B7E003ED8B7 /* NotificationTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 				DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */,
 				DD226438284CF543003ED8B7 /* SimpleCellModel.swift */,
 				DD226443284D06D5003ED8B7 /* ExtendedInfoCellModel.swift */,
+				DD226447284D0B14003ED8B7 /* NotificationCellModel.swift */,
 				DD22643C284CF5E6003ED8B7 /* Constants.swift */,
 				DD226441284CF713003ED8B7 /* Sections.swift */,
 			);
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD22644A284D0B7E003ED8B7 /* NotificationTableViewCell.swift in Sources */,
 				DD226421284CEDAE003ED8B7 /* SettingsViewController.swift in Sources */,
 				DD226440284CF6BD003ED8B7 /* SettingsCellApi.swift in Sources */,
 				DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */,
@@ -279,6 +286,7 @@
 				DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 				DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */,
+				DD226448284D0B14003ED8B7 /* NotificationCellModel.swift in Sources */,
 				DD226446284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift in Sources */,
 				DD22643D284CF5E6003ED8B7 /* Constants.swift in Sources */,
 			);
