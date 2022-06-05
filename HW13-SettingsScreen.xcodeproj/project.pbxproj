@@ -18,6 +18,7 @@
 		DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226438284CF543003ED8B7 /* SimpleCellModel.swift */; };
 		DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */; };
 		DD22643D284CF5E6003ED8B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643C284CF5E6003ED8B7 /* Constants.swift */; };
+		DD226440284CF6BD003ED8B7 /* SettingsCellApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643F284CF6BD003ED8B7 /* SettingsCellApi.swift */; };
 		DD226442284CF713003ED8B7 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226441284CF713003ED8B7 /* Sections.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		DD226438284CF543003ED8B7 /* SimpleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCellModel.swift; sourceTree = "<group>"; };
 		DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		DD22643C284CF5E6003ED8B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DD22643F284CF6BD003ED8B7 /* SettingsCellApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellApi.swift; sourceTree = "<group>"; };
 		DD226441284CF713003ED8B7 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 		DD22641B284CEDAE003ED8B7 /* HW13-SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DD22643E284CF6AB003ED8B7 /* API */,
 				DD226433284CEFC6003ED8B7 /* Model */,
 				DD226432284CEFC1003ED8B7 /* View */,
 				DD226431284CEFB6003ED8B7 /* Controller */,
@@ -136,6 +139,14 @@
 				DD226441284CF713003ED8B7 /* Sections.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD22643E284CF6AB003ED8B7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DD22643F284CF6BD003ED8B7 /* SettingsCellApi.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD226421284CEDAE003ED8B7 /* SettingsViewController.swift in Sources */,
+				DD226440284CF6BD003ED8B7 /* SettingsCellApi.swift in Sources */,
 				DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */,
 				DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */,
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
