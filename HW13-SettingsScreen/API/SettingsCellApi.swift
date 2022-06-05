@@ -24,6 +24,10 @@ class SettingsCellApi {
         var modelsArray = [Sections]()
 
         firstSection = [
+            .switchCell(SwitchCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
+                                        backgroundColor: .systemOrange,
+                                        labelText: "Авиарежим",
+                                        _switch: false)),
             .simpleCell(SimpleCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
                                         backgroundColor: .systemOrange,
                                         labelText: "Авиарежим")),
