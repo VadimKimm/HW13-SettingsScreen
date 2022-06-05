@@ -12,6 +12,7 @@ class SettingsCellApi {
     static let dictionaryOfIcons: [String: UIImage?] = [
         "airplane": UIImage(systemName: "airplane"),
         "wifi": UIImage(systemName: "wifi"),
+        "notificationsCount": UIImage(systemName: "1.circle.fill")
     ]
 
     static func getCellsArray(_ dictionaryOfIcons: [String: UIImage?] = SettingsCellApi.dictionaryOfIcons) -> [Sections] {
@@ -39,6 +40,10 @@ class SettingsCellApi {
         ]
 
         thirdSection = [
+            .notificationCell(NotificationCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
+                                                    backgroundColor: .gray,
+                                                    labelText: "Основные",
+                                                    notificationsIndicator: dictionaryOfIcons["notificationsCount"] ?? nil)),
             .simpleCell(SimpleCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
                                         backgroundColor: .systemOrange,
                                         labelText: "Авиарежим")),
