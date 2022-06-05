@@ -26,3 +26,9 @@ enum Metrics {
 
     static let _switchRightOffset = -15
 }
+
+enum Colors {
+    static let customBlue = UIColor(red:  67 / 255.0, green: 81 / 255.0, blue:  175 / 255.0, alpha: 1)
+    static let customPurple = UIColor(red:  76 / 255.0, green: 77 / 255.0, blue:  201 / 255.0, alpha: 1)
+    static let customRed = UIColor(red:  233 / 255.0, green: 73 / 255.0, blue:  51 / 255.0, alpha: 1)
+}
