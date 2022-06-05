@@ -16,6 +16,8 @@
 		DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */; };
 		DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */; };
 		DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226438284CF543003ED8B7 /* SimpleCellModel.swift */; };
+		DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */; };
+		DD22643D284CF5E6003ED8B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643C284CF5E6003ED8B7 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsViewController.swift; sourceTree = "<group>"; };
 		DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellModel.swift; sourceTree = "<group>"; };
 		DD226438284CF543003ED8B7 /* SimpleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCellModel.swift; sourceTree = "<group>"; };
+		DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		DD22643C284CF5E6003ED8B7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		DD226432284CEFC1003ED8B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			children = (
 				DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */,
 				DD226438284CF543003ED8B7 /* SimpleCellModel.swift */,
+				DD22643C284CF5E6003ED8B7 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,8 +253,10 @@
 				DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */,
 				DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */,
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
+				DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 				DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */,
+				DD22643D284CF5E6003ED8B7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
