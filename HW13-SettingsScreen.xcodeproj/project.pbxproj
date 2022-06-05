@@ -14,6 +14,7 @@
 		DD226426284CEDAF003ED8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD226425284CEDAF003ED8B7 /* Assets.xcassets */; };
 		DD226429284CEDAF003ED8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */; };
 		DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */; };
+		DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DD226428284CEDAF003ED8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD22642A284CEDAF003ED8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD226434284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSettingsViewController.swift; sourceTree = "<group>"; };
+		DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		DD226433284CEFC6003ED8B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD226436284CF4DB003ED8B7 /* TemplateCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				DD226421284CEDAE003ED8B7 /* SettingsViewController.swift in Sources */,
 				DD226435284CF2B0003ED8B7 /* ExtensionSettingsViewController.swift in Sources */,
+				DD226437284CF4DB003ED8B7 /* TemplateCellModel.swift in Sources */,
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 			);
