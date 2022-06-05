@@ -54,6 +54,7 @@ class SettingsViewController: UIViewController {
         tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
         tableView.register(ExtendedInfoTableViewCell.self, forCellReuseIdentifier: ExtendedInfoTableViewCell.identifier)
         tableView.register(NotificationTableViewCell.self, forCellReuseIdentifier: NotificationTableViewCell.identifier)
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
     }
 
     private func setupNavigationBarAppearance() {
