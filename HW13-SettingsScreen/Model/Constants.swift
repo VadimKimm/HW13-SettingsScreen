@@ -16,4 +16,7 @@ enum Metrics {
     static let labelLeftOffset = 17
 
     static let arrowImageViewRightOffset = -15
+
+    static let sideLabelFontSize: CGFloat = 16
+    static let sideLabelRightOffset = -8
 }

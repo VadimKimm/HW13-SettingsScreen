@@ -21,6 +21,7 @@
 		DD226440284CF6BD003ED8B7 /* SettingsCellApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22643F284CF6BD003ED8B7 /* SettingsCellApi.swift */; };
 		DD226442284CF713003ED8B7 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226441284CF713003ED8B7 /* Sections.swift */; };
 		DD226444284D06D5003ED8B7 /* ExtendedInfoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226443284D06D5003ED8B7 /* ExtendedInfoCellModel.swift */; };
+		DD226446284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DD22643F284CF6BD003ED8B7 /* SettingsCellApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellApi.swift; sourceTree = "<group>"; };
 		DD226441284CF713003ED8B7 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		DD226443284D06D5003ED8B7 /* ExtendedInfoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedInfoCellModel.swift; sourceTree = "<group>"; };
+		DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DD22643A284CF5BE003ED8B7 /* SimpleTableViewCell.swift */,
+				DD226445284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				DD22643B284CF5BE003ED8B7 /* SimpleTableViewCell.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 				DD226439284CF543003ED8B7 /* SimpleCellModel.swift in Sources */,
+				DD226446284D0798003ED8B7 /* ExtendedInfoTableViewCell.swift in Sources */,
 				DD22643D284CF5E6003ED8B7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
