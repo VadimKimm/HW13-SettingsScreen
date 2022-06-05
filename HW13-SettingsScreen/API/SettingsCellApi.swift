@@ -12,7 +12,30 @@ class SettingsCellApi {
     static let dictionaryOfIcons: [String: UIImage?] = [
         "airplane": UIImage(systemName: "airplane"),
         "wifi": UIImage(systemName: "wifi"),
-        "notificationsCount": UIImage(systemName: "1.circle.fill")
+        "bluetooth": UIImage(named: "bluetooth"),
+        "cellular": UIImage(systemName: "antenna.radiowaves.left.and.right"),
+        "hotspot": UIImage(systemName: "personalhotspot"),
+        "vpn": UIImage(named: "vpn"),
+
+        "notifications": UIImage(systemName: "bell.badge.fill"),
+        "sounds": UIImage(systemName: "speaker.wave.2.fill"),
+        "focus": UIImage(systemName: "moon.fill"),
+        "screenTime": UIImage(systemName: "hourglass"),
+
+        "general": UIImage(systemName: "gear"),
+        "controlCenter": UIImage(systemName: "command"),
+        "display": UIImage(systemName: "textformat.size"),
+        "homeScreen": UIImage(systemName: "house"),
+        "accessibility": UIImage(systemName: "figure.wave.circle"),
+        "wallpaper": UIImage(named: "wallpaper"),
+        "siri": UIImage(named: "siri"),
+        "faceId": UIImage(systemName: "faceid"),
+        "emergencySos": UIImage(named: "sos"),
+        "exposure": UIImage(systemName: "sun.min.fill"),
+        "battery": UIImage(systemName: "battery.100"),
+        "privacy": UIImage(systemName: "hand.raised.fill"),
+
+        "notificationsCount": UIImage(systemName: "1.circle.fill"),
     ]
 
     static func getCellsArray(_ dictionaryOfIcons: [String: UIImage?] = SettingsCellApi.dictionaryOfIcons) -> [Sections] {
