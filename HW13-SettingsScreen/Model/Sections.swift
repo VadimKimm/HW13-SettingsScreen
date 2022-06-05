@@ -15,6 +15,7 @@ enum CellType {
     case simpleCell(SimpleCellModel)
     case extendedInfoCell(ExtendedInfoCellModel)
     case notificationCell(NotificationCellModel)
+    case switchCell(SwitchCellModel)
 
     func configureCell(cell: UITableViewCell, model: CellType) {
         switch self {
@@ -27,6 +28,9 @@ enum CellType {
         case .notificationCell(let model):
             let cell = cell as! NotificationTableViewCell
             cell.configure(with: model)
+        case .switchCell(let model):
+            let cell = cell as! SwitchTableViewCell
+            cell.configure(with: model)
         }
     }
 
@@ -38,6 +42,21 @@ enum CellType {
             return tableView.dequeueReusableCell(withIdentifier: ExtendedInfoTableViewCell.identifier) as! ExtendedInfoTableViewCell
         case .notificationCell:
             return tableView.dequeueReusableCell(withIdentifier: NotificationTableViewCell.identifier) as! NotificationTableViewCell
+        case .switchCell:
+            return tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier) as! SwitchTableViewCell
+        }
+    }
+
+    func didSelectCell(cell: UITableViewCell) {
+        switch self {
+        case .simpleCell(let model):
+            model.cellTapped()
+        case .extendedInfoCell(let model):
+            model.cellTapped()
+        case .notificationCell(let model):
+            model.cellTapped()
+        case .switchCell(let model):
+            model.cellTapped()
         }
     }
 }

@@ -23,4 +23,6 @@ enum Metrics {
     static let notificationsImageViewWidthOffset = -16
     static let notificationsImageViewHeightOffset = -16
     static let notificationsImageViewRightOffset = -18
+
+    static let _switchRightOffset = -15
 }

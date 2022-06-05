@@ -1,5 +1,5 @@
 //
-//  ExtendedInfoTableViewCell.swift
+//  SwitchTableViewCell.swift
 //  HW13-SettingsScreen
 //
 //  Created by Vadim Kim on 05.06.2022.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class ExtendedInfoTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
 
     //MARK: - Cell objects -
 
-    static let identifier = "ExtendedInfoTableViewCell"
+    static let identifier = "SwitchTableViewCell"
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         image.tintColor = .white
         return image
     }()
@@ -37,21 +37,10 @@ class ExtendedInfoTableViewCell: UITableViewCell {
         return label
     }()
 
-    private let arrowImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        image.tintColor = .systemGray2
-        image.clipsToBounds = true
-        return image
-    }()
-
-    private let sideLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: Metrics.sideLabelFontSize)
-        label.textColor = .systemGray
-        label.numberOfLines = 1
-        return label
+    private let _switch: UISwitch = {
+        let _switch = UISwitch()
+        _switch.onTintColor = .systemGreen
+        return _switch
     }()
 
     //MARK: - Setting up TableViewCell -
@@ -66,8 +55,7 @@ class ExtendedInfoTableViewCell: UITableViewCell {
         contentView.addSubview(iconImageContainer)
         iconImageContainer.addSubview(iconImageView)
         contentView.addSubview(label)
-        contentView.addSubview(arrowImageView)
-        contentView.addSubview(sideLabel)
+        contentView.addSubview(_switch)
         contentView.clipsToBounds = true
     }
 
@@ -91,22 +79,16 @@ class ExtendedInfoTableViewCell: UITableViewCell {
             make.left.equalTo(iconImageContainer.snp.right).offset(Metrics.labelLeftOffset)
         }
 
-        arrowImageView.snp.makeConstraints { make in
+        _switch.snp.makeConstraints { make in
             make.centerY.equalTo(iconImageContainer.snp.centerY)
-            make.right.equalTo(contentView.snp.right).offset(Metrics.arrowImageViewRightOffset)
-        }
-
-        sideLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(contentView.snp.centerY)
-            make.right.equalTo(arrowImageView.snp.left).offset(Metrics.sideLabelRightOffset)
+            make.right.equalTo(contentView.snp.right).offset(Metrics._switchRightOffset)
         }
     }
 
-    func configure(with model: ExtendedInfoCellModel) {
+    func configure(with model: SwitchCellModel) {
         iconImageView.image = model.icon
         iconImageContainer.backgroundColor = model.backgroundColor
         label.text = model.labelText
-        arrowImageView.image = model.arrowImage
-        sideLabel.text = model.sideLabelText
+        _switch.isOn = false
     }
 }

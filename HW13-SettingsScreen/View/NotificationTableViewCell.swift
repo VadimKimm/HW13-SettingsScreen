@@ -71,7 +71,6 @@ class NotificationTableViewCell: UITableViewCell {
         contentView.addSubview(arrowImageView)
         contentView.addSubview(notificationsImageView)
         contentView.clipsToBounds = true
-
     }
 
     override func layoutSubviews() {
