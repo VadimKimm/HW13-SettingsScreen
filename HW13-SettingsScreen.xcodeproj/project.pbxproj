@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545C5B43BA4A37F2FCAC272C /* Pods_HW13_SettingsScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D173EA4161D6FA8A97F54C /* Pods_HW13_SettingsScreen.framework */; };
 		DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22641C284CEDAE003ED8B7 /* AppDelegate.swift */; };
 		DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22641E284CEDAE003ED8B7 /* SceneDelegate.swift */; };
-		DD226421284CEDAE003ED8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226420284CEDAE003ED8B7 /* ViewController.swift */; };
-		DD226424284CEDAE003ED8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD226422284CEDAE003ED8B7 /* Main.storyboard */; };
+		DD226421284CEDAE003ED8B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD226420284CEDAE003ED8B7 /* SettingsViewController.swift */; };
 		DD226426284CEDAF003ED8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD226425284CEDAF003ED8B7 /* Assets.xcassets */; };
 		DD226429284CEDAF003ED8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F5341891EAB6FCFA1961327 /* Pods-HW13-SettingsScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW13-SettingsScreen.release.xcconfig"; path = "Target Support Files/Pods-HW13-SettingsScreen/Pods-HW13-SettingsScreen.release.xcconfig"; sourceTree = "<group>"; };
+		BA6488304D7A4B1179824576 /* Pods-HW13-SettingsScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HW13-SettingsScreen.debug.xcconfig"; path = "Target Support Files/Pods-HW13-SettingsScreen/Pods-HW13-SettingsScreen.debug.xcconfig"; sourceTree = "<group>"; };
+		C2D173EA4161D6FA8A97F54C /* Pods_HW13_SettingsScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HW13_SettingsScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD226419284CEDAE003ED8B7 /* HW13-SettingsScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW13-SettingsScreen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD22641C284CEDAE003ED8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD22641E284CEDAE003ED8B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD226420284CEDAE003ED8B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DD226423284CEDAE003ED8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD226420284CEDAE003ED8B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD226425284CEDAF003ED8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD226428284CEDAF003ED8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD22642A284CEDAF003ED8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545C5B43BA4A37F2FCAC272C /* Pods_HW13_SettingsScreen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83B89DECD0FCE56E202E0FB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2D173EA4161D6FA8A97F54C /* Pods_HW13_SettingsScreen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		865758E0199094DB6F296425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA6488304D7A4B1179824576 /* Pods-HW13-SettingsScreen.debug.xcconfig */,
+				7F5341891EAB6FCFA1961327 /* Pods-HW13-SettingsScreen.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD226410284CEDAE003ED8B7 = {
 			isa = PBXGroup;
 			children = (
 				DD22641B284CEDAE003ED8B7 /* HW13-SettingsScreen */,
 				DD22641A284CEDAE003ED8B7 /* Products */,
+				865758E0199094DB6F296425 /* Pods */,
+				83B89DECD0FCE56E202E0FB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,46 @@
 		DD22641B284CEDAE003ED8B7 /* HW13-SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DD226433284CEFC6003ED8B7 /* Model */,
+				DD226432284CEFC1003ED8B7 /* View */,
+				DD226431284CEFB6003ED8B7 /* Controller */,
+				DD226430284CEF92003ED8B7 /* Resourses */,
+			);
+			path = "HW13-SettingsScreen";
+			sourceTree = "<group>";
+		};
+		DD226430284CEF92003ED8B7 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
 				DD22641C284CEDAE003ED8B7 /* AppDelegate.swift */,
 				DD22641E284CEDAE003ED8B7 /* SceneDelegate.swift */,
-				DD226420284CEDAE003ED8B7 /* ViewController.swift */,
-				DD226422284CEDAE003ED8B7 /* Main.storyboard */,
 				DD226425284CEDAF003ED8B7 /* Assets.xcassets */,
 				DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */,
 				DD22642A284CEDAF003ED8B7 /* Info.plist */,
 			);
-			path = "HW13-SettingsScreen";
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		DD226431284CEFB6003ED8B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD226420284CEDAE003ED8B7 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD226432284CEFC1003ED8B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD226433284CEFC6003ED8B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD22642D284CEDAF003ED8B7 /* Build configuration list for PBXNativeTarget "HW13-SettingsScreen" */;
 			buildPhases = (
+				781BDA0FC8E6F71334B1D33B /* [CP] Check Pods Manifest.lock */,
 				DD226415284CEDAE003ED8B7 /* Sources */,
 				DD226416284CEDAE003ED8B7 /* Frameworks */,
 				DD226417284CEDAE003ED8B7 /* Resources */,
+				A85992E4312DD64BBB7ED7B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +182,59 @@
 			files = (
 				DD226429284CEDAF003ED8B7 /* LaunchScreen.storyboard in Resources */,
 				DD226426284CEDAF003ED8B7 /* Assets.xcassets in Resources */,
-				DD226424284CEDAE003ED8B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		781BDA0FC8E6F71334B1D33B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HW13-SettingsScreen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A85992E4312DD64BBB7ED7B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW13-SettingsScreen/Pods-HW13-SettingsScreen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HW13-SettingsScreen/Pods-HW13-SettingsScreen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HW13-SettingsScreen/Pods-HW13-SettingsScreen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD226415284CEDAE003ED8B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD226421284CEDAE003ED8B7 /* ViewController.swift in Sources */,
+				DD226421284CEDAE003ED8B7 /* SettingsViewController.swift in Sources */,
 				DD22641D284CEDAE003ED8B7 /* AppDelegate.swift in Sources */,
 				DD22641F284CEDAE003ED8B7 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +243,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DD226422284CEDAE003ED8B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD226423284CEDAE003ED8B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DD226427284CEDAF003ED8B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +370,7 @@
 		};
 		DD22642E284CEDAF003ED8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA6488304D7A4B1179824576 /* Pods-HW13-SettingsScreen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,10 +378,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13-SettingsScreen/Info.plist";
+				INFOPLIST_FILE = "HW13-SettingsScreen/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +398,7 @@
 		};
 		DD22642F284CEDAF003ED8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5341891EAB6FCFA1961327 /* Pods-HW13-SettingsScreen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,10 +406,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HW13-SettingsScreen/Info.plist";
+				INFOPLIST_FILE = "HW13-SettingsScreen/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
