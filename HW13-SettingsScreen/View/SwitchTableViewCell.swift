@@ -57,7 +57,6 @@ class SwitchTableViewCell: UITableViewCell {
         contentView.addSubview(label)
         contentView.addSubview(_switch)
         contentView.clipsToBounds = true
-
     }
 
     override func layoutSubviews() {

@@ -69,7 +69,6 @@ class ExtendedInfoTableViewCell: UITableViewCell {
         contentView.addSubview(arrowImageView)
         contentView.addSubview(sideLabel)
         contentView.clipsToBounds = true
-
     }
 
     override func layoutSubviews() {

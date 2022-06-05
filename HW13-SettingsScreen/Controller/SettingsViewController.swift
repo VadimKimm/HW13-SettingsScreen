@@ -63,7 +63,5 @@ class SettingsViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         title = "Настройки"
     }
-
-
 }
 
