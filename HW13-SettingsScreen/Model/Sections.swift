@@ -14,6 +14,7 @@ struct Sections {
 enum CellType {
     case simpleCell(SimpleCellModel)
     case extendedInfoCell(ExtendedInfoCellModel)
+    case notificationCell(NotificationCellModel)
 
     func configureCell(cell: UITableViewCell, model: CellType) {
         switch self {
@@ -22,6 +23,9 @@ enum CellType {
             cell.configure(with: model)
         case .extendedInfoCell(let model):
             let cell = cell as! ExtendedInfoTableViewCell
+            cell.configure(with: model)
+        case .notificationCell(let model):
+            let cell = cell as! NotificationTableViewCell
             cell.configure(with: model)
         }
     }
@@ -32,6 +36,8 @@ enum CellType {
             return  tableView.dequeueReusableCell(withIdentifier: SimpleTableViewCell.identifier) as! SimpleTableViewCell
         case .extendedInfoCell:
             return tableView.dequeueReusableCell(withIdentifier: ExtendedInfoTableViewCell.identifier) as! ExtendedInfoTableViewCell
+        case .notificationCell:
+            return tableView.dequeueReusableCell(withIdentifier: NotificationTableViewCell.identifier) as! NotificationTableViewCell
         }
     }
 }
