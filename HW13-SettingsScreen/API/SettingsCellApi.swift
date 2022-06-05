@@ -26,9 +26,10 @@ class SettingsCellApi {
             .simpleCell(SimpleCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
                                         backgroundColor: .systemOrange,
                                         labelText: "Авиарежим")),
-            .simpleCell(SimpleCellModel(icon: dictionaryOfIcons["wifi"] ?? nil,
+            .extendedInfoCell(ExtendedInfoCellModel(icon: dictionaryOfIcons["wifi"] ?? nil,
                                         backgroundColor: .systemOrange,
-                                        labelText: "Wi-Fi")),
+                                        labelText: "Wi-Fi",
+                                        sideLabelText: "Не подключено")),
         ]
 
         secondSection = [
