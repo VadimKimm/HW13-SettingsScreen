@@ -10,8 +10,17 @@ import SnapKit
 
 class SettingsViewController: UIViewController {
 
-    private let tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
+
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
+        tableView.register(ExtendedInfoTableViewCell.self, forCellReuseIdentifier: ExtendedInfoTableViewCell.identifier)
+        tableView.register(NotificationTableViewCell.self, forCellReuseIdentifier: NotificationTableViewCell.identifier)
+        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
+
         return tableView
     }()
 
@@ -25,8 +34,6 @@ class SettingsViewController: UIViewController {
         setupHierarchy()
         setupLayout()
         setupView()
-
-        setupTableView()
     }
 
     //MARK: - Settings -
@@ -46,16 +53,6 @@ class SettingsViewController: UIViewController {
     }
 
     //MARK: - Private functions -
-
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-
-        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
-        tableView.register(ExtendedInfoTableViewCell.self, forCellReuseIdentifier: ExtendedInfoTableViewCell.identifier)
-        tableView.register(NotificationTableViewCell.self, forCellReuseIdentifier: NotificationTableViewCell.identifier)
-        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
-    }
 
     private func setupNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
