@@ -9,9 +9,19 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
-
     static let identifier = "NotificationTableViewCell"
+
+    // MARK: - Configuration -
+
+    func configure(with model: NotificationCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        arrowImageView.image = model.arrowImage
+        notificationsImageView.image = model.notificationsIndicator
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
@@ -104,13 +114,5 @@ class NotificationTableViewCell: UITableViewCell {
             make.height.equalTo(contentView.snp.height).offset(Metrics.notificationsImageViewWidthOffset)
             make.right.equalTo(arrowImageView.snp.left).offset(Metrics.notificationsImageViewRightOffset)
         }
-    }
-
-    func configure(with model: NotificationCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        arrowImageView.image = model.arrowImage
-        notificationsImageView.image = model.notificationsIndicator
     }
 }

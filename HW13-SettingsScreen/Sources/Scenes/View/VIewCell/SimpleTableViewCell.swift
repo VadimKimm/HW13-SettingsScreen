@@ -9,9 +9,18 @@ import UIKit
 
 class SimpleTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
-
     static let identifier = "SimpleTableViewCell"
+
+    // MARK: - Configuration -
+
+    func configure(with model: SimpleCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        arrowImageView.image = model.arrowImage
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
@@ -86,12 +95,5 @@ class SimpleTableViewCell: UITableViewCell {
             make.centerY.equalTo(iconImageContainer.snp.centerY)
             make.right.equalTo(contentView.snp.right).offset(Metrics.arrowImageViewRightOffset)
         }
-    }
-
-    func configure(with model: SimpleCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        arrowImageView.image = model.arrowImage
     }
 }

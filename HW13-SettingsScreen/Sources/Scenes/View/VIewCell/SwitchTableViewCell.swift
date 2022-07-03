@@ -9,9 +9,18 @@ import UIKit
 
 class SwitchTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
-
     static let identifier = "SwitchTableViewCell"
+    
+    // MARK: - Configuration -
+
+    func configure(with model: SwitchCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        _switch.isOn = false
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
@@ -83,12 +92,5 @@ class SwitchTableViewCell: UITableViewCell {
             make.centerY.equalTo(iconImageContainer.snp.centerY)
             make.right.equalTo(contentView.snp.right).offset(Metrics._switchRightOffset)
         }
-    }
-
-    func configure(with model: SwitchCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        _switch.isOn = false
     }
 }

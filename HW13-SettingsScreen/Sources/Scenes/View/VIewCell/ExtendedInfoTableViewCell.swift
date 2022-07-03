@@ -9,9 +9,19 @@ import UIKit
 
 class ExtendedInfoTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
-
     static let identifier = "ExtendedInfoTableViewCell"
+
+    // MARK: - Configuration -
+
+    func configure(with model: ExtendedInfoCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        arrowImageView.image = model.arrowImage
+        sideLabel.text = model.sideLabelText
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
@@ -100,13 +110,5 @@ class ExtendedInfoTableViewCell: UITableViewCell {
             make.centerY.equalTo(contentView.snp.centerY)
             make.right.equalTo(arrowImageView.snp.left).offset(Metrics.sideLabelRightOffset)
         }
-    }
-
-    func configure(with model: ExtendedInfoCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        arrowImageView.image = model.arrowImage
-        sideLabel.text = model.sideLabelText
     }
 }
