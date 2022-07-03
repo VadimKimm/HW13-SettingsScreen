@@ -1,5 +1,5 @@
 //
-//  SwitchTableViewCell.swift
+//  ExtendedInfoTableViewCell.swift
 //  HW13-SettingsScreen
 //
 //  Created by Vadim Kim on 05.06.2022.
@@ -7,16 +7,26 @@
 
 import UIKit
 
-class SwitchTableViewCell: UITableViewCell {
+class ExtendedInfoTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
+    static let identifier = "ExtendedInfoTableViewCell"
 
-    static let identifier = "SwitchTableViewCell"
+    // MARK: - Configuration -
+
+    func configure(with model: ExtendedInfoCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        arrowImageView.image = model.arrowImage
+        sideLabel.text = model.sideLabelText
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
+        image.contentMode = .scaleAspectFill
         image.tintColor = .white
         return image
     }()
@@ -37,10 +47,21 @@ class SwitchTableViewCell: UITableViewCell {
         return label
     }()
 
-    private let _switch: UISwitch = {
-        let _switch = UISwitch()
-        _switch.onTintColor = .systemGreen
-        return _switch
+    private let arrowImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.tintColor = .systemGray2
+        image.clipsToBounds = true
+        return image
+    }()
+
+    private let sideLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: Metrics.sideLabelFontSize)
+        label.textColor = .systemGray
+        label.numberOfLines = 1
+        return label
     }()
 
     //MARK: - Setting up TableViewCell -
@@ -55,7 +76,8 @@ class SwitchTableViewCell: UITableViewCell {
         contentView.addSubview(iconImageContainer)
         iconImageContainer.addSubview(iconImageView)
         contentView.addSubview(label)
-        contentView.addSubview(_switch)
+        contentView.addSubview(arrowImageView)
+        contentView.addSubview(sideLabel)
         contentView.clipsToBounds = true
     }
 
@@ -79,16 +101,14 @@ class SwitchTableViewCell: UITableViewCell {
             make.left.equalTo(iconImageContainer.snp.right).offset(Metrics.labelLeftOffset)
         }
 
-        _switch.snp.makeConstraints { make in
+        arrowImageView.snp.makeConstraints { make in
             make.centerY.equalTo(iconImageContainer.snp.centerY)
-            make.right.equalTo(contentView.snp.right).offset(Metrics._switchRightOffset)
+            make.right.equalTo(contentView.snp.right).offset(Metrics.arrowImageViewRightOffset)
         }
-    }
 
-    func configure(with model: SwitchCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        _switch.isOn = false
+        sideLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(contentView.snp.centerY)
+            make.right.equalTo(arrowImageView.snp.left).offset(Metrics.sideLabelRightOffset)
+        }
     }
 }

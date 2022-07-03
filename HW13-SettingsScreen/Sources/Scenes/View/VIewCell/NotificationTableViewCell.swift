@@ -1,5 +1,5 @@
 //
-//  ExtendedInfoTableViewCell.swift
+//  NotificationTableViewCell.swift
 //  HW13-SettingsScreen
 //
 //  Created by Vadim Kim on 05.06.2022.
@@ -7,16 +7,26 @@
 
 import UIKit
 
-class ExtendedInfoTableViewCell: UITableViewCell {
+class NotificationTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
+    static let identifier = "NotificationTableViewCell"
 
-    static let identifier = "ExtendedInfoTableViewCell"
+    // MARK: - Configuration -
+
+    func configure(with model: NotificationCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        arrowImageView.image = model.arrowImage
+        notificationsImageView.image = model.notificationsIndicator
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         image.tintColor = .white
         return image
     }()
@@ -46,13 +56,15 @@ class ExtendedInfoTableViewCell: UITableViewCell {
         return image
     }()
 
-    private let sideLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: Metrics.sideLabelFontSize)
-        label.textColor = .systemGray
-        label.numberOfLines = 1
-        return label
-    }()
+    private let notificationsImageView: UIImageView = {
+         let image = UIImageView()
+         image.translatesAutoresizingMaskIntoConstraints = false
+         image.contentMode = .scaleAspectFit
+         image.tintColor = .red
+         image.clipsToBounds = true
+         return image
+     }()
+
 
     //MARK: - Setting up TableViewCell -
 
@@ -67,7 +79,7 @@ class ExtendedInfoTableViewCell: UITableViewCell {
         iconImageContainer.addSubview(iconImageView)
         contentView.addSubview(label)
         contentView.addSubview(arrowImageView)
-        contentView.addSubview(sideLabel)
+        contentView.addSubview(notificationsImageView)
         contentView.clipsToBounds = true
     }
 
@@ -96,17 +108,11 @@ class ExtendedInfoTableViewCell: UITableViewCell {
             make.right.equalTo(contentView.snp.right).offset(Metrics.arrowImageViewRightOffset)
         }
 
-        sideLabel.snp.makeConstraints { make in
+        notificationsImageView.snp.makeConstraints { make in
             make.centerY.equalTo(contentView.snp.centerY)
-            make.right.equalTo(arrowImageView.snp.left).offset(Metrics.sideLabelRightOffset)
+            make.width.equalTo(contentView.snp.height).offset(Metrics.notificationsImageViewWidthOffset)
+            make.height.equalTo(contentView.snp.height).offset(Metrics.notificationsImageViewWidthOffset)
+            make.right.equalTo(arrowImageView.snp.left).offset(Metrics.notificationsImageViewRightOffset)
         }
-    }
-
-    func configure(with model: ExtendedInfoCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        arrowImageView.image = model.arrowImage
-        sideLabel.text = model.sideLabelText
     }
 }

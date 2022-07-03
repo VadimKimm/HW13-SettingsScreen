@@ -25,6 +25,10 @@ enum Metrics {
     static let notificationsImageViewRightOffset = -18
 
     static let _switchRightOffset = -15
+
+    static let cellLayoutMarginsLeft: CGFloat = 55
+
+    static let navigationBarTitle = "Настройки"
 }
 
 enum Colors {

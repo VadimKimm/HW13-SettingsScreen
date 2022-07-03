@@ -1,5 +1,5 @@
 //
-//  NotificationTableViewCell.swift
+//  SwitchTableViewCell.swift
 //  HW13-SettingsScreen
 //
 //  Created by Vadim Kim on 05.06.2022.
@@ -7,11 +7,20 @@
 
 import UIKit
 
-class NotificationTableViewCell: UITableViewCell {
+class SwitchTableViewCell: UITableViewCell {
 
-    //MARK: - Cell objects -
+    static let identifier = "SwitchTableViewCell"
+    
+    // MARK: - Configuration -
 
-    static let identifier = "NotificationTableViewCell"
+    func configure(with model: SwitchCellModel) {
+        iconImageView.image = model.icon
+        iconImageContainer.backgroundColor = model.backgroundColor
+        label.text = model.labelText
+        _switch.isOn = false
+    }
+
+    // MARK: - Views -
 
     private let iconImageView: UIImageView = {
         let image = UIImageView()
@@ -37,24 +46,11 @@ class NotificationTableViewCell: UITableViewCell {
         return label
     }()
 
-    private let arrowImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        image.tintColor = .systemGray2
-        image.clipsToBounds = true
-        return image
+    private let _switch: UISwitch = {
+        let _switch = UISwitch()
+        _switch.onTintColor = .systemGreen
+        return _switch
     }()
-
-    private let notificationsImageView: UIImageView = {
-         let image = UIImageView()
-         image.translatesAutoresizingMaskIntoConstraints = false
-         image.contentMode = .scaleAspectFit
-         image.tintColor = .red
-         image.clipsToBounds = true
-         return image
-     }()
-
 
     //MARK: - Setting up TableViewCell -
 
@@ -68,8 +64,7 @@ class NotificationTableViewCell: UITableViewCell {
         contentView.addSubview(iconImageContainer)
         iconImageContainer.addSubview(iconImageView)
         contentView.addSubview(label)
-        contentView.addSubview(arrowImageView)
-        contentView.addSubview(notificationsImageView)
+        contentView.addSubview(_switch)
         contentView.clipsToBounds = true
     }
 
@@ -93,24 +88,9 @@ class NotificationTableViewCell: UITableViewCell {
             make.left.equalTo(iconImageContainer.snp.right).offset(Metrics.labelLeftOffset)
         }
 
-        arrowImageView.snp.makeConstraints { make in
+        _switch.snp.makeConstraints { make in
             make.centerY.equalTo(iconImageContainer.snp.centerY)
-            make.right.equalTo(contentView.snp.right).offset(Metrics.arrowImageViewRightOffset)
+            make.right.equalTo(contentView.snp.right).offset(Metrics._switchRightOffset)
         }
-
-        notificationsImageView.snp.makeConstraints { make in
-            make.centerY.equalTo(contentView.snp.centerY)
-            make.width.equalTo(contentView.snp.height).offset(Metrics.notificationsImageViewWidthOffset)
-            make.height.equalTo(contentView.snp.height).offset(Metrics.notificationsImageViewWidthOffset)
-            make.right.equalTo(arrowImageView.snp.left).offset(Metrics.notificationsImageViewRightOffset)
-        }
-    }
-
-    func configure(with model: NotificationCellModel) {
-        iconImageView.image = model.icon
-        iconImageContainer.backgroundColor = model.backgroundColor
-        label.text = model.labelText
-        arrowImageView.image = model.arrowImage
-        notificationsImageView.image = model.notificationsIndicator
     }
 }
