@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsCellApi {
+class SettingsModel {
 
     static let dictionaryOfIcons: [String: UIImage?] = [
         "airplane": UIImage(systemName: "airplane"),
@@ -38,13 +38,13 @@ class SettingsCellApi {
         "notificationsCount": UIImage(systemName: "1.circle.fill")
     ]
 
-    static func getCellsArray(_ dictionaryOfIcons: [String: UIImage?] = SettingsCellApi.dictionaryOfIcons) -> [Sections] {
+    func createModels(_ dictionaryOfIcons: [String: UIImage?] = SettingsModel.dictionaryOfIcons) -> [Sections] {
 
         var firstSection = [CellType]()
         var secondSection = [CellType]()
         var thirdSection = [CellType]()
 
-        var modelsArray = [Sections]()
+        var models = [Sections]()
 
         firstSection = [
             .switchCell(SwitchCellModel(icon: dictionaryOfIcons["airplane"] ?? nil,
@@ -126,12 +126,12 @@ class SettingsCellApi {
                                        labelText: "Конфиденциальность"))
         ]
 
-        modelsArray = [
+        models = [
             Sections(items: firstSection),
             Sections(items: secondSection),
             Sections(items: thirdSection)
         ]
 
-        return modelsArray
+        return models
     }
 }
