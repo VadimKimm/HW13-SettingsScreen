@@ -10,55 +10,32 @@ import SnapKit
 
 class SettingsController: UIViewController {
 
-    private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+    var model: SettingsModel?
 
-        tableView.dataSource = self
-        tableView.delegate = self
-
-        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: SimpleTableViewCell.identifier)
-        tableView.register(ExtendedInfoTableViewCell.self, forCellReuseIdentifier: ExtendedInfoTableViewCell.identifier)
-        tableView.register(NotificationTableViewCell.self, forCellReuseIdentifier: NotificationTableViewCell.identifier)
-        tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
-
-        return tableView
-    }()
-
-    var modelsArray = SettingsCellApi.getCellsArray()
+    private var settingsView: SettingsView? {
+        guard isViewLoaded else { return nil }
+        return view as? SettingsView
+    }
     
     //MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupHierarchy()
-        setupLayout()
-        setupView()
-    }
+        view = SettingsView()
+        model = SettingsModel()
 
-    //MARK: - Settings -
-
-    private func setupHierarchy() {
-        view.addSubview(tableView)
-    }
-
-    private func setupLayout() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-
-    private func setupView() {
-        setupNavigationBarAppearance()
-    }
-
-    //MARK: - Private functions -
-
-    private func setupNavigationBarAppearance() {
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = UIColor.secondarySystemBackground
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        title = "Настройки"
+        configureView()
     }
 }
 
+// MARK: - Configurations -
+
+private extension SettingsController {
+    func configureView() {
+        title = Metrics.navigationBarTitle
+
+        guard let models = model?.createModels() else { return }
+        settingsView?.configure(with: models)
+    }
+}
