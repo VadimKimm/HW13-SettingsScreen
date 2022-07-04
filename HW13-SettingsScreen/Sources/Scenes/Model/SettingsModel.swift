@@ -1,5 +1,5 @@
 //
-//  SettingsCellApi.swift
+//  SettingsModel.swift
 //  HW13-SettingsScreen
 //
 //  Created by Vadim Kim on 05.06.2022.
